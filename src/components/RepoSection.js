@@ -1,4 +1,5 @@
 import React from 'react'
+import RepoList from './RepoList'
 
 const styles = {
 	container:{
@@ -84,6 +85,7 @@ class RepoSection extends React.Component {
 			  	<option value="PHP">PHP</option>
 			</select>
        	</div>
+       	<RepoList/>
       </div>
     )
   }

@@ -4,7 +4,7 @@ import RepoSection from './RepoSection'
 
 const styles={
   mainContainer:{
-    display:'flex'
+    display:'flex',
   }
 }
 
