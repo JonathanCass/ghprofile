@@ -1,6 +1,12 @@
 import React from 'react'
-import HeaderBar from './HeaderBar'
 import ProfileBlock from './ProfileBlock'
+import RepoSection from './RepoSection'
+
+const styles={
+  mainContainer:{
+    display:'flex'
+  }
+}
 
 class MainPage extends React.Component {
   /*constructor(props) {
@@ -9,10 +15,10 @@ class MainPage extends React.Component {
 
   render() {
     return (
-    	<div>
-    		<HeaderBar/>
-	      	<ProfileBlock/>
-      	</div>
+    	<div style={styles.mainContainer}>
+	      <ProfileBlock/>
+	      <RepoSection/>
+      </div>
     )
   }
 }

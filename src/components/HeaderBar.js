@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../node_modules/font-awesome/css/font-awesome.css'
 
 const styles = {
 	headerBar:{
@@ -16,13 +17,16 @@ const styles = {
 		marginRight:220
 	},
 	icon:{
-		color: 'red',
-		fontSize: 22
+		color: 'whte',
+		fontSize: 38,
+		position: 'relative',
+		top: 8,
+		right: 16
 	},
 	headerInput:{
-		width: 300,
-		height: 26,
-		marginTop: 10,
+		width: 320,
+		height: 30,
+		marginTop: 12,
 		borderRadius: 5,
 		fontSize: 14,
 		paddingLeft: 5,

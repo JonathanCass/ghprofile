@@ -1,16 +1,18 @@
 import React from 'react'
-
+import {getUser} from '../api/profile'
+import {connect} from 'react-redux'
 const styles = {
 	profileBlock:{
 		margin: 24,
 		height: 400,
 		width: 230,
-		padding: 0
+		padding: 0,
+		display: 'inline-block'
 	},
 	profilePicture:{
 		height: 242,
 		width: 230,
-		background: 'pink',
+		background: 'black',
 		borderRadius: 15,
 	},
 	profileName:{
@@ -48,11 +50,13 @@ class ProfileBlock extends React.Component {
   /*constructor(props) {
     super(props)
   }*/
-
+  componentWillMount(){
+  	getUser()
+  }
   render() {
     return (
     	<div style={styles.profileBlock}>
-	      	<img src="" alt="" style={styles.profilePicture}/>
+	      	<img src="{this.props.user.avatar_url}" alt="" style={styles.profilePicture}/>
 	      	<div style={styles.profileName}>
 	      		<span style={styles.name}> UserName </span><br />
 	     		<span style={styles.login}> UserLogin </span>
@@ -64,4 +68,8 @@ class ProfileBlock extends React.Component {
   }
 }
 
-export default ProfileBlock
+function mapStateToProps (appState) {
+	return {user: appState.profile}
+}
+
+export default connect(mapStateToProps)(ProfileBlock)
