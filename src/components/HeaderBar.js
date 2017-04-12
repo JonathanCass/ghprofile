@@ -35,8 +35,13 @@ const styles = {
 	},
 	headerText:{
 		marginLeft: 12,
-		fontSize: 15,
-		textAlign: 'center'
+		fontSize: 15,	
+	},
+	plus:{
+		height:25,
+		width: 25,
+		marginTop: 14,
+		fontSize: 20
 	},
 }
 class HeaderBar extends React.Component {
@@ -48,16 +53,15 @@ class HeaderBar extends React.Component {
     return (
     	<div style={styles.backgroundColorBar}>
     	<div style={styles.headerBar}>
-	      	<div style={styles.headerLeft}>
+	      	<div>
 	      		<i className="fa fa-github" style={styles.icon} aria-hidden="true"></i>
 	      		<input type="text" placeholder="Search GitHub" style={styles.headerInput}></input>
 	      		<span style={styles.headerText}> Pull Requests </span>
 	      		<span style={styles.headerText}> Issues </span>
 	      		<span style={styles.headerText}> Gist </span>
 	      	</div>
-	      	<div style={styles.headerRight}>
-	      		<span > + </span>
-	      		<img src="" alt=""/>
+	      	<div>
+	      		<div style={styles.plus}> + </div>
 	      	</div>
 	    </div>
 	    </div>

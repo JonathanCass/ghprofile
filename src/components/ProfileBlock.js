@@ -1,6 +1,7 @@
 import React from 'react'
 import {getUser} from '../api/profile'
 import {connect} from 'react-redux'
+
 const styles = {
 	profileBlock:{
 		margin: 24,
@@ -36,13 +37,8 @@ const styles = {
 		fontSize: 14,
 		fontWeight: 'bold'
 	},
-	blockReport:{
-		height: 50,
-		border: 'solid 1px #A4A7AC',
-		borderWidth: '0 0 1px 0',
-		color: '#666666',
-		fontSize: 12,
-		lineHeight: '48px'
+	block:{
+		fontSize: 12
 	}
 }
 
@@ -62,7 +58,7 @@ class ProfileBlock extends React.Component {
 	     		<span style={styles.login}> UserLogin </span>
 	      	</div>
 	    	<button type='button' style={styles.followButton}> Follow </button>
-	      	<div style={styles.blockReport}> Block or report user </div>
+	      	<div className="block" style={styles.block}> Block or report user </div>
       	</div>
     )
   }
