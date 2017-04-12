@@ -3,9 +3,10 @@ import RepoList from './RepoList'
 
 const styles = {
 	container:{
-		width: 730,
+		width: 1460,
 		marginTop: 22,
-		display: 'inline-block'
+		display: 'inline-block',
+		margin: 'auto'
 	},
 	repoHeaderBar:{
 		height: 64,

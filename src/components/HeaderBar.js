@@ -2,31 +2,31 @@ import React from 'react'
 import '../../node_modules/font-awesome/css/font-awesome.css'
 
 const styles = {
+	backgroundColorBar:{
+		background: '#24292E',
+		height: 54
+	},
 	headerBar:{
 		height: 54,
 		display: 'flex',
 		justifyContent: 'space-between',
 		overflow: 'hidden',
 		color: '#C8D0D1',
-		background: '#24292E'
-	},
-	headerLeft:{
-		marginLeft: 220
-	},
-	headerRight:{
-		marginRight:220
+		background: '#24292E',
+		width: 984,
+		margin: 'auto'
 	},
 	icon:{
 		color: 'whte',
 		fontSize: 38,
 		position: 'relative',
 		top: 8,
-		right: 16
+		right: -6
 	},
 	headerInput:{
-		width: 320,
+		width: 300,
 		height: 30,
-		marginTop: 12,
+		margin: '12px 0 0 20px',
 		borderRadius: 5,
 		fontSize: 14,
 		paddingLeft: 5,
@@ -46,6 +46,7 @@ class HeaderBar extends React.Component {
 
   render() {
     return (
+    	<div style={styles.backgroundColorBar}>
     	<div style={styles.headerBar}>
 	      	<div style={styles.headerLeft}>
 	      		<i className="fa fa-github" style={styles.icon} aria-hidden="true"></i>
@@ -58,6 +59,7 @@ class HeaderBar extends React.Component {
 	      		<span > + </span>
 	      		<img src="" alt=""/>
 	      	</div>
+	    </div>
 	    </div>
     )
   }
