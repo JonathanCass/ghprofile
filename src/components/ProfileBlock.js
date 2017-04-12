@@ -52,7 +52,7 @@ class ProfileBlock extends React.Component {
   render() {
     return (
     	<div style={styles.profileBlock}>
-	      	<img src={this.props.user.avatar_url} alt="" style={styles.profilePicture}/>
+	      	<a href="https://avatars1.githubusercontent.com/u/25914591"><img src={this.props.user.avatar_url} alt="" style={styles.profilePicture}/></a>
 	      	<div style={styles.profileName}>
 	      		<span style={styles.name}> {this.props.user.name} </span><br />
 	     		<span style={styles.login}> {this.props.user.login} </span>
