@@ -20,8 +20,8 @@ class MainPage extends React.Component {
   render() {
     return (
     	<div style={styles.mainContainer}>
-	      <ProfileBlock/>
-	      <RepoSection/>
+	      <ProfileBlock />
+	      <RepoSection />
       </div>
     )
   }

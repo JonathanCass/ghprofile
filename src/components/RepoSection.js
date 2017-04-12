@@ -1,12 +1,14 @@
 import React from 'react'
 import RepoList from './RepoList'
+import {getUser} from '../api/profile'
+import {connect} from 'react-redux'
 
 const styles = {
 	container:{
 		width: 1460,
 		marginTop: 22,
 		display: 'inline-block',
-		margin: 'auto'
+		
 	},
 	repoHeaderBar:{
 		height: 64,
@@ -51,24 +53,31 @@ const styles = {
 		width: 130,
 		fontSize: 14,
 		background: '#F0F4F7'
+	},
+	greyBubble:{
+		background: '#EDEDEE',
+		borderRadius: 5,
+		fontSize: 12,
+		padding: 2
 	}
-
 }
 
 class RepoSection extends React.Component {
   /*constructor(props) {
     super(props)
   }*/
-
+  componentWillMount(){
+  	getUser()
+  }
   render() {
     return (
       <div style={styles.container}>
        	<div style={styles.repoHeaderBar}>
        		<div style={styles.headerText}>Overview</div>
-       		<div style={styles.headerText}>Repositories</div>
-       		<div style={styles.headerText}>Stars</div>
-       		<div style={styles.headerText}>Followers</div>
-       		<div style={styles.headerText}>Following</div>
+       		<div style={styles.headerText}>Repositories <span style={styles.greyBubble} >{this.props.user.public_repos }</span></div>
+       		<div style={styles.headerText}>Stars <span style={styles.greyBubble} >1</span></div>
+       		<div style={styles.headerText}>Followers <span style={styles.greyBubble} >{this.props.user.followers }</span></div>
+       		<div style={styles.headerText}>Following <span style={styles.greyBubble} >{this.props.user.following }</span></div>
        	</div>
        	<div style={styles.repoSearchBar}>
        		<input type="text" name="search" placeholder="Search repositories..." style={styles.search}></input>
@@ -92,4 +101,8 @@ class RepoSection extends React.Component {
   }
 }
 
-export default RepoSection
+function mapStateToProps (appState) {
+	return {user: appState.profile}
+}
+
+export default connect(mapStateToProps)(RepoSection)
