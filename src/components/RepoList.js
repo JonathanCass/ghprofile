@@ -1,5 +1,5 @@
 import React from 'react'
-import {getUser} from '../api/profile'
+import {getRepos} from '../api/profile'
 import {connect} from 'react-redux' 
 
 const styles ={
@@ -15,9 +15,10 @@ class RepoList extends React.Component {
     super(props)
   }*/
   componentWillMount(){
-  	getUser()
+  	getRepos()
   }
   render() {
+    console.log(this.props)
     return (
       <div>
       	<div style={styles.block}>
@@ -29,7 +30,7 @@ class RepoList extends React.Component {
 }
 
 function mapStateToProps (appState) {
-	return {user: appState.profile}
+	return {repos: appState.repos}
 }
 
 export default connect(mapStateToProps)(RepoList)

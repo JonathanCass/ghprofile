@@ -8,7 +8,6 @@ const styles = {
 		width: 1460,
 		marginTop: 22,
 		display: 'inline-block',
-		
 	},
 	repoHeaderBar:{
 		height: 64,

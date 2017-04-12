@@ -9,3 +9,12 @@ export function getUser(){
 		})
 	})
 }
+
+export function getRepos(){
+	axios.get('https://api.github.com/users/JonathanCass/repos').then(results=>{
+		store.dispatch({
+			type: 'GET_REPOS',
+			repos: results.data
+		})
+	})
+}
