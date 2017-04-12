@@ -3,6 +3,7 @@ import MainPage from './MainPage'
 import {Provider} from 'react-redux'
 import store from '../store'
 import HeaderBar from './HeaderBar'
+import FooterBar from './FooterBar'
 
 export default React.createClass({
   render() {
@@ -10,9 +11,10 @@ export default React.createClass({
     	<Provider store={store}>
     		<div>
     			<HeaderBar/>
-      			<MainPage/>
-      		</div>
-      	</Provider>
+      		<MainPage/>
+          <FooterBar/>
+      	</div>
+      </Provider>
     )
   }
 })

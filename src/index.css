@@ -29,3 +29,9 @@ a {
 .block:hover{
 	color: #0366D6;
 }
+.footLink:{
+	margin-left: 140px;
+}
+.footLink:hover{
+	text-decoration: underline;
+}
