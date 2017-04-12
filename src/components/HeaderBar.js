@@ -55,7 +55,7 @@ class HeaderBar extends React.Component {
     	<div style={styles.headerBar}>
 	      	<div>
 	      		<i className="fa fa-github" style={styles.icon} aria-hidden="true"></i>
-	      		<input type="text" placeholder="Search GitHub" style={styles.headerInput}></input>
+	      		<input type="text" placeholder="Search GitHub" style={styles.headerInput} className="searchInput"></input>
 	      		<span style={styles.headerText}> Pull Requests </span>
 	      		<span style={styles.headerText}> Issues </span>
 	      		<span style={styles.headerText}> Gist </span>

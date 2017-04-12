@@ -54,8 +54,8 @@ class ProfileBlock extends React.Component {
     	<div style={styles.profileBlock}>
 	      	<img src={this.props.user.avatar_url} alt="" style={styles.profilePicture}/>
 	      	<div style={styles.profileName}>
-	      		<span style={styles.name}> UserName </span><br />
-	     		<span style={styles.login}> UserLogin </span>
+	      		<span style={styles.name}> {this.props.user.name} </span><br />
+	     		<span style={styles.login}> {this.props.user.login} </span>
 	      	</div>
 	    	<button type='button' style={styles.followButton}> Follow </button>
 	      	<div className="block" style={styles.block}> Block or report user </div>

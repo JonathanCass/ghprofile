@@ -35,3 +35,6 @@ a {
 .footLink:hover{
 	text-decoration: underline;
 }
+.searchInput:focus{
+	outline: 0;
+}
